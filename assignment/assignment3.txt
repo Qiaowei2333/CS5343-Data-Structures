@@ -1,0 +1,52 @@
+QUESTION 1
+
+1. What is the purpose of the Process Control Block? 
+2. Describe the three categories of information present in the process control block as shown in Figure 3.13 in the text book.
+3. What is being represented in Figure 3.14? 
+
+QUESTION 2
+
+1. Explain the meaning of a process’s instruction trace.
+2. Explain the instruction trace presented in Figure 3.4 in the book. What is meant by Time-Out and by I/O Request? 
+3. Explain the role of the dispatcher service in all of this. How is the dispatcher represented in Figure 3.4?
+
+QUESTION 3
+
+1. What is the Process Image? 
+2. What two places does a process image reside? Hint: Suspended Process. 
+3. What are the five generic steps involved with building a new process image? 
+
+QUESTION 4
+
+Using Figure 3.6, describe the process states and conditions that cause a process to transition from one state to another i.e. 1) The transition from New to Ready. 2) The transition from Ready to Running. 3), 4), etc.
+
+QUESTION 5
+
+Describe the difference between the monolithic kernel architecture and the process-based kernel architecture.  
+
+Include a description about how user processes access kernel services in each model.
+
+QUESTION 6
+
+Describe the differences between the user control stack and a kernel control stack.
+
+Describe the reasons for having both a user control stack and a kernel control stack.
+
+QUESTION 7
+
+1. Describe what it means to “Suspend a Process”. 
+2. What is the benefit of suspending a process? 
+
+QUESTION 8
+
+1. What are the two system calls used to create and launch a new executable process in the Linux (Unix) operating system. 
+2. Describe how a parent process uses these two calls to create a new child process from a given executable file.
+3. What is meant by copy on write? You can use the book “Linux Kernel Development”, Section 3 found in the Supplemental Materials eLearning folder.
+
+QUESTION 9
+
+Does every mode switch (i.e. system call) result in a blocked process? Explain why or why not.
+
+QUESTION 10
+
+Describe the four mechanisms that are used to preempt a process’s execution.

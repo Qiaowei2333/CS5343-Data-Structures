@@ -1,0 +1,132 @@
+Question 1
+Needs Grading
+Ungraded	
+Describe the difference between API and ABI services / functions.
+
+Selected Answer:	
+ABI service provide access to basic Operating System services i.e. access to the OS Kernel. Also ABI instructions execute in Kernel Mode.
+But API service cannot access the Kernel directly. API are services provided by libraries to perform common functions i.e. I/O, Process
+Management, etc. And API instructions execute in User Mode
+Correct Answer:	
+[None]
+Response Feedback:	[None Given]
+Question 2
+Needs Grading
+Ungraded	
+Explain why a program’s execution must be ‘blocked’ when requesting certain operating system services i.e. executing a Blocking System Calls.
+
+What is meant when a process is in a ‘blocked’ state?
+
+Selected Answer:	
+Blocking system call is one that must wait until the action can be completed, typically I/O operation.  
+The call may either wait for the input event to complete (waiting for a keystroke, for example) or it may immediately return to the calling code. When the call waits indefinitely, it is said to be 'blocked'.
+Correct Answer:	
+[None]
+Response Feedback:	[None Given]
+Question 3
+Needs Grading
+Ungraded	
+1. What are the two processor modes described in this section? 
+2. Describe the two restrictions placed on program execution when the processor is executing in user mode.
+3. What causes the processor to switch to the ‘kernel mode’ state?
+
+Selected Answer:	
+1. Kernel Mode and User Mode
+2. In user mode, access is limited to the memory allocated to the process by the kernel. Besides, the program cannot execute the privileged instructions.
+Correct Answer:	
+[None]
+Response Feedback:	[None Given]
+Question 4
+Needs Grading
+Ungraded	
+1. Describe the purpose of the memory regions shown in Slide Multiple Processes Maintained in Memory (Slide 40) i.e. Process List / Process A & B.
+2. Describe the purpose of the ‘Process Index Register”.
+
+Selected Answer:	
+1. Process List contains one entry for each process, which includes a pointer to the location of  memory that contains the process. The entry may also include part or all of the context.
+   Process A & B are two processes that contain program, data, and context information.
+2. The process index register contains the index into the process list of the process currently controlling the processor.
+Correct Answer:	
+[None]
+Response Feedback:	[None Given]
+Question 5
+Needs Grading
+Ungraded	
+Describe the purpose of Base and Limit registers in Slide 40.
+
+Selected Answer:	
+The base and limit registers define the region in memory occupied by the process: The base register is the starting address of the region of memory and the limit is the size of the region (in bytes or words).
+Correct Answer:	
+[None]
+Response Feedback:	[None Given]
+Question 6
+Needs Grading
+Ungraded	
+What is the name of the mechanism used by a program to request a service from the operating system?
+
+What are the four steps the processor executes when responding to a program’s service request in the Linux OS (from the slides)?
+
+Selected Answer:	
+A. The user program makes requests of the operating system though the use of the system call (syscall) mechanism. 
+B. 1. The program places the syscall number that identifies the OS request and its arguments into specific processor registers. 
+    2. The program executes an INT (software interrupt) instruction.
+    3. The interrupt handler uses the syscall number to determine the OS service being requested and executes the request in kernel mode.
+    4. When syscall handler finishes, it executes the IRET instruction which restores the processor state from stack and returns the processor to User Mode.
+
+Correct Answer:	
+[None]
+Response Feedback:	[None Given]
+Question 7
+Needs Grading
+Ungraded	
+Use the example on Slide “Simple Batch Systems”.
+1. Describe the purpose of ‘Program Batches’ and how the technique was used to address processor limitations such as limited memory. 
+2. How is information passed from one program to another in a batch? 
+
+Selected Answer:	
+1. The purpose of 'Program Batches' is to improve processor utilization. A single program including many functions may not fit into the limited memory, so 'Program batch' can divide the single program into multiple programs which will fit into the computer's memory respectively. Then each program is constructed to branch back to the monitor when it completes processing, at which point the monitor automatically begins loading the next program.
+2. A temporary file is created to store and  transfer information from one program to another. “Payroll Records” is a temporary data store (file) used to maintain the generated per-employee information needed to print checks. 
+
+Correct Answer:	
+[None]
+Response Feedback:	[None Given]
+Question 8
+Needs Grading
+Ungraded	
+Describe the four innovations in computer systems design that make operating systems (monitors) possible.
+
+Selected Answer:	
+Protected Memory
+Privileged Instructions
+Interrupts
+Timers
+Correct Answer:	
+[None]
+Response Feedback:	[None Given]
+Question 9
+Needs Grading
+Ungraded	
+1. Describe the principle of Preemptive Multitasking. 
+2. What are two triggers / methods of preempting a program’s execution described in the slides?
+
+Selected Answer:	
+1. Preemptive multitasking involves the use of an interrupt mechanism which suspends the currently executing process and invokes a scheduler to determine which process should execute next. Therefore, all processes will get some  
+   amount of CPU time at any given time.
+2. an I/O operation and a ‘timer interrupt’
+Correct Answer:	
+[None]
+Response Feedback:	[None Given]
+Question 10
+Needs Grading
+Ungraded	
+Note: The materials for this question are found in the text book.
+1. Describe ‘Modules’ in the Linux Operating System. 
+2. What are two important characteristics of Linux modules given in the text book?
+
+Selected Answer:	
+1. Linux is structured as a collection of modules, a number of which can be automatically loaded and unloaded on demand. These relatively independent blocks are referred to as loadable modules. In essence, a module is an object file
+    whose code can be linked to and unlinked from the kernel at runtime. Typically, a module implements some specific function, such as a file system, a device driver, or some other feature of the kernel’s upper layer.
+2. Dynamic linking and Stackable modules
+Correct Answer:	
+[None]
+Response Feedback:	[None Given]
